@@ -63,5 +63,3 @@ vmap <silent><Leader>im :<C-U>call phpactor#ExtractMethod()<CR>
 
 nmap <Leader>j :m .+1<CR>==
 nmap <Leader>k :m .-2<CR>==
-imap <Leader>j <Esc>:m .+1<CR>==gi
-imap <Leader>k <Esc>:m .-2<CR>==gi
