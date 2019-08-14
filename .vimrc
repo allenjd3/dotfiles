@@ -11,7 +11,7 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'phpactor/phpactor', {'for':'php', 'do':'composer install'}
 
 call plug#end()
-
+set nowrap
 let mapleader = " "
 imap jj <Esc>
 nmap <Leader>e :Explore<CR>
@@ -61,9 +61,7 @@ vmap <silent><Leader>ie :<C-U>call phpactor#ExtractExpression(v:true)<CR>
 " Extract method from selection
 vmap <silent><Leader>im :<C-U>call phpactor#ExtractMethod()<CR>
 
-nmap <A-j> :m .+1<CR>==
-nmap <A-k> :m .-2<CR>==
-imap <A-j> <Esc>:m .+1<CR>==gi
-imap <A-k> <Esc>:m .-2<CR>==gi
-nmap <A-j> :m '>+1<CR>gv=gv
-nmap <A-k> :m '<-2<CR>gv=gv
+nmap <Leader>j :m .+1<CR>==
+nmap <Leader>k :m .-2<CR>==
+imap <Leader>j <Esc>:m .+1<CR>==gi
+imap <Leader>k <Esc>:m .-2<CR>==gi
