@@ -1,7 +1,8 @@
-colorscheme gruvbox
 set tabstop=4
+set t_Co=256 
 
 call plug#begin('~/.vim/plugged')
+Plug 'altercation/vim-colors-solarized'
 Plug 'junegunn/fzf', {'dir': '~/.fzf', 'do': './install --all'}
 Plug 'junegunn/fzf.vim'
 Plug 'SirVer/ultisnips'
@@ -9,8 +10,10 @@ Plug 'honza/vim-snippets'
 Plug 'posva/vim-vue'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'phpactor/phpactor', {'for':'php', 'do':'composer install'}
-
 call plug#end()
+
+set background=light
+colorscheme PaperColor
 set nowrap
 let mapleader = " "
 imap jj <Esc>
