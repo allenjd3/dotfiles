@@ -3,6 +3,8 @@ set t_Co=256
 
 call plug#begin('~/.vim/plugged')
 Plug 'altercation/vim-colors-solarized'
+Plug 'tpope/vim-surround'
+Plug 'sheerun/vim-polyglot'
 Plug 'junegunn/fzf', {'dir': '~/.fzf', 'do': './install --all'}
 Plug 'junegunn/fzf.vim'
 Plug 'SirVer/ultisnips'
