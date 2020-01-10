@@ -12,6 +12,7 @@ Plug 'honza/vim-snippets'
 Plug 'posva/vim-vue'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'phpactor/phpactor', {'for':'php', 'do':'composer install'}
+Plug 'janko/vim-test'
 call plug#end()
 
 set background=light
