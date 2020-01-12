@@ -13,6 +13,7 @@ Plug 'posva/vim-vue'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'phpactor/phpactor', {'for':'php', 'do':'composer install'}
 Plug 'janko/vim-test'
+Plug 'NLKNguyen/papercolor-theme'
 call plug#end()
 
 set background=light
@@ -69,3 +70,18 @@ vmap <silent><Leader>im :<C-U>call phpactor#ExtractMethod()<CR>
 
 nmap <Leader>j :m .+1<CR>==
 nmap <Leader>k :m .-2<CR>==
+
+set noshowmatch
+
+function! g:DefMatchParen()
+		if exists(":NoMatchParen")
+				:NoMatchParen
+		endif
+endfunction
+
+augroup plugin_initialize
+		autocmd!
+		autocmd VimEnter * call DefMatchParen()
+augroup END
+
+
