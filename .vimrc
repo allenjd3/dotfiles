@@ -84,4 +84,6 @@ augroup plugin_initialize
 		autocmd VimEnter * call DefMatchParen()
 augroup END
 
-
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
