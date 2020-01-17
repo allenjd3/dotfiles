@@ -1,0 +1,31 @@
+snippet html5 "Create html5 template"
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>$1</title>
+		$2
+	</head>
+	<body>
+		$3
+	</body>
+<html>
+endsnippet
+
+snippet test5 "This is a quick test stub"
+<?php
+
+use Illuminate\Foundation\Testing\WithoutMiddleware;
+use Illuminate\Foundation\Testing\DatabaseMigrations;
+use Illuminate\Foundation\Testing\DatabaseTransactions;
+
+class $1 extends TestCase
+{
+	/**
+	* @test
+	*/
+	public function ${2:a_simple_test}()
+	{
+		$3
+	}
+}
+endsnippet
