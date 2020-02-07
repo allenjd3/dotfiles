@@ -1,5 +1,10 @@
 set tabstop=4
 set t_Co=256 
+set shiftwidth=4
+set expandtab
+set tabstop=4
+set softtabstop=4
+set smartcase
 
 call plug#begin('~/.vim/plugged')
 Plug 'altercation/vim-colors-solarized'
