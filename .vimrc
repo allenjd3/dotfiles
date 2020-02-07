@@ -21,6 +21,8 @@ Plug 'janko/vim-test'
 Plug 'NLKNguyen/papercolor-theme'
 call plug#end()
 
+:set t_ut=""
+
 set background=light
 colorscheme PaperColor
 set nowrap
