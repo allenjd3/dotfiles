@@ -5,6 +5,8 @@ set expandtab
 set tabstop=4
 set softtabstop=4
 set smartcase
+set swapfile
+set dir=~/tmp
 
 call plug#begin('~/.vim/plugged')
 Plug 'altercation/vim-colors-solarized'
