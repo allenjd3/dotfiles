@@ -30,6 +30,7 @@ colorscheme PaperColor
 set nowrap
 let mapleader = " "
 imap jj <Esc>
+imap <c-l> <Esc>la
 nmap <Leader>e :Explore<CR>
 nmap <Leader>f :GFiles<CR>
 nmap <Leader>F :Files<CR>
