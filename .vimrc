@@ -8,6 +8,11 @@ set smartcase
 set nobackup
 set noswapfile
 
+syntax on
+filetype plugin indent on
+filetype on
+filetype indent on
+
 call plug#begin('~/.vim/plugged')
 Plug 'altercation/vim-colors-solarized'
 Plug 'tpope/vim-surround'
@@ -21,6 +26,8 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'phpactor/phpactor', {'for':'php', 'do':'composer install'}
 Plug 'janko/vim-test'
 Plug 'NLKNguyen/papercolor-theme'
+Plug 'vim-ruby/vim-ruby'
+Plug 'tpope/vim-rails'
 call plug#end()
 
 :set t_ut=""
@@ -97,3 +104,6 @@ augroup END
 let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<c-b>"
 let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+
+autocmd FileType ruby setlocal expandtab shiftwidth=2 tabstop=2
+autocmd FileType eruby setlocal expandtab shiftwidth=2 tabstop=2
