@@ -104,6 +104,7 @@ augroup END
 let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<c-b>"
 let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+let g:shtuff_receiver = 'devrunner'
 
 autocmd FileType ruby setlocal expandtab shiftwidth=2 tabstop=2
 autocmd FileType eruby setlocal expandtab shiftwidth=2 tabstop=2
