@@ -25,15 +25,15 @@ Plug 'posva/vim-vue'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'phpactor/phpactor', {'for':'php', 'do':'composer install'}
 Plug 'janko/vim-test'
-Plug 'NLKNguyen/papercolor-theme'
 Plug 'vim-ruby/vim-ruby'
 Plug 'tpope/vim-rails'
+Plug 'doums/darcula'
 call plug#end()
 
 :set t_ut=""
 
 set background=light
-colorscheme PaperColor
+colorscheme darcula
 set nowrap
 let mapleader = " "
 imap jj <Esc>
