@@ -1,43 +1,40 @@
-set tabstop=4
-set t_Co=256 
-set shiftwidth=4
-set expandtab
-set tabstop=4
-set softtabstop=4
-set smartcase
-set nobackup
-set noswapfile
+" ------------------------------------------------------------------------------
+" # Mappings
+" ------------------------------------------------------------------------------
+" # All of your mappings go in this file! Don't worry about your mappings
+" # being separate from related config. Sourcery provides mappings to
+" # easily jump between plugin definitions, mappings, and configs.
+" #
+" # More info: https://github.com/jesseleite/vim-sourcery#jumping-between-files
 
-syntax on
-filetype plugin indent on
-filetype on
-filetype indent on
 
-call plug#begin('~/.vim/plugged')
-Plug 'altercation/vim-colors-solarized'
-Plug 'tpope/vim-surround'
-Plug 'sheerun/vim-polyglot'
-Plug 'junegunn/fzf', {'dir': '~/.fzf', 'do': './install --all'}
-Plug 'junegunn/fzf.vim'
-Plug 'SirVer/ultisnips'
-Plug 'honza/vim-snippets'
-Plug 'posva/vim-vue'
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'phpactor/phpactor', {'for':'php', 'do':'composer install'}
-Plug 'janko/vim-test'
-Plug 'vim-ruby/vim-ruby'
-Plug 'tpope/vim-rails'
-Plug 'doums/darcula'
-call plug#end()
+" ------------------------------------------------------------------------------
+" # Example
+" ------------------------------------------------------------------------------
 
-:set t_ut=""
+" " Map leader
+" let mapleader = "\<Space>"
 
-set background=light
-colorscheme darcula
-set nowrap
+" " Exit insert mode
+" imap jk <Esc>
+
+" " Vertical split
+" nmap <silent> <Leader>v :vsplit<CR>
 let mapleader = " "
+
+" Set jj to esc
 imap jj <Esc>
+" insert after next character
 imap <c-l> <Esc>la
+
+"move line down and keep indent
+nmap <Leader>j :m .+1<CR>==
+"move line up and keep indent 
+nmap <Leader>k :m .-2<CR>==
+
+
+" " Fzf fuzzy finders
+" " Mappings: fzf
 nmap <Leader>e :Explore<CR>
 nmap <Leader>f :GFiles<CR>
 nmap <Leader>F :Files<CR>
@@ -55,6 +52,16 @@ nmap <Leader>: :History:<CR>
 nmap <Leader>/ :History/<CR>
 nmap <Leader>M :Maps<CR>
 nmap <Leader>s :Filetypes<CR>
+
+" " Mappings: vim-sourcery
+function! SourceryMappings()
+    nmap <buffer> gp <Plug>SourceryGoToRelatedPluginDefinition
+    nmap <buffer> gm <Plug>SourceryGoToRelatedMappings
+    nmap <buffer> gc <Plug>SourceryGoToRelatedConfig
+endfunction
+
+" " Mappings: phpactor
+
 " Include use statement
 nmap <Leader>u :call phpactor#UseAdd()<CR>
 
@@ -85,26 +92,8 @@ vmap <silent><Leader>ie :<C-U>call phpactor#ExtractExpression(v:true)<CR>
 " Extract method from selection
 vmap <silent><Leader>im :<C-U>call phpactor#ExtractMethod()<CR>
 
-nmap <Leader>j :m .+1<CR>==
-nmap <Leader>k :m .-2<CR>==
-
-set noshowmatch
-
-function! g:DefMatchParen()
-		if exists(":NoMatchParen")
-				:NoMatchParen
-		endif
-endfunction
-
-augroup plugin_initialize
-		autocmd!
-		autocmd VimEnter * call DefMatchParen()
-augroup END
-
+" " Mappings: ultisnips
 let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<c-b>"
 let g:UltiSnipsJumpBackwardTrigger="<c-z>"
-let g:shtuff_receiver = 'devrunner'
 
-autocmd FileType ruby setlocal expandtab shiftwidth=2 tabstop=2
-autocmd FileType eruby setlocal expandtab shiftwidth=2 tabstop=2
