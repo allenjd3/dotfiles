@@ -53,7 +53,7 @@ nmap <Leader>/ :History/<CR>
 nmap <Leader>M :Maps<CR>
 nmap <Leader>s :Filetypes<CR>
 
-" " Mappings: vim-sourcery
+" " Mappings: sourcery
 function! SourceryMappings()
     nmap <buffer> gp <Plug>SourceryGoToRelatedPluginDefinition
     nmap <buffer> gm <Plug>SourceryGoToRelatedMappings
