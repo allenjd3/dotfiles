@@ -33,6 +33,8 @@ Plug 'janko/vim-test'
 Plug 'vim-ruby/vim-ruby'
 Plug 'tpope/vim-rails'
 Plug 'doums/darcula'
+Plug 'mattn/emmet-vim'
+Plug 'junegunn/vim-peekaboo'
 
 
 " ------------------------------------------------------------------------------

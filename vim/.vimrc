@@ -1,6 +1,5 @@
-
 call plug#begin('~/.vim/plugged')
-	source ~/dotfiles/vim/plugins.vim
+    source ~/dotfiles/vim/plugins.vim
 call plug#end()
 
 call sourcery#init()

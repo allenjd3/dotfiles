@@ -24,14 +24,18 @@ let mapleader = " "
 
 " Set jj to esc
 imap jj <Esc>
+
+xnoremap ii <Esc>
+
 " insert after next character
 imap <c-l> <Esc>la
 
-"move line down and keep indent
-nmap <Leader>j :m .+1<CR>==
-"move line up and keep indent 
-nmap <Leader>k :m .-2<CR>==
-
+nnoremap <Leader>j :m .+1<CR>==
+nnoremap <Leader>k :m .-2<CR>==
+inoremap <Leader>j <Esc>:m .+1<CR>==gi
+inoremap <Leader>k <Esc>:m .-2<CR>==gi
+vnoremap <Leader>j :m '>+1<CR>gv=gv
+vnoremap <Leader>k :m '<-2<CR>gv=gv
 
 " " Fzf fuzzy finders
 " " Mappings: fzf
@@ -91,6 +95,7 @@ vmap <silent><Leader>ie :<C-U>call phpactor#ExtractExpression(v:true)<CR>
 
 " Extract method from selection
 vmap <silent><Leader>im :<C-U>call phpactor#ExtractMethod()<CR>
+
 
 " " Mappings: ultisnips
 let g:UltiSnipsExpandTrigger="<tab>"
